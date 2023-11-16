@@ -1,0 +1,16 @@
+#16) Write a script named copyfile.py. This script should prompt the user for the names of two text files. The contents of the first file should be input and written to the second file.  
+file1=input("Enter First Filename : ")
+file2=input("Enter Second Filename : ")
+fn1=open(file1,'r')
+fn2=open(file2,'w')
+cont=fn1.readlines()
+for i in range(0,len(cont)):
+    fn2.write(cont[i])
+fn2.close()
+print("Content of first file copied to second file ")
+fn2=open(file2,'r')
+cont1=fn2.read()
+print("Content of second file: ")
+print(cont1)
+fn1.close()
+fn2.close()
